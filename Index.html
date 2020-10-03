@@ -18,10 +18,7 @@
 
   <script>
     function openLink() {
-      document.getElementById("twitter").innerHTML = "https://twitter.com/?lang=en-in";
-    }
-    function LogIn() {
-      document.getElementById("login").innerHTML = "Successfully login!"
+      window.open("https://twitter.com/?lang=en-in");
     }
   </script>
 
@@ -57,7 +54,7 @@
                 aria-hidden="true"></i></a>
 
           </div>
-          <button class="btn btn-group btn-primary border m-3" id="login" onclick="Login()">
+          <button class="btn btn-group btn-primary border m-3" id="login" onclick="openLink()">
             LogIn <span class="badge badge-primary"></span>
           </button>
 
