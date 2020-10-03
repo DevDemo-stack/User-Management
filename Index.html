@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- jQuery library -->
@@ -13,6 +15,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function openLink() {
+      document.getElementById("twitter").innerHTML = "https://twitter.com/?lang=en-in";
+    }
+    function LogIn() {
+      document.getElementById("login").innerHTML = "Successfully login!"
+    }
+  </script>
 
   <title>Document</title>
 </head>
@@ -34,19 +45,20 @@
             <label for="Password"></label>
             <input type="password" class="form-control" name="password" id="" placeholder="password">
           </div>
-          <div class="dropdown open m-3">
-            <button class="btn border dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </button>
-            <div class="dropdown-menu" aria-labelledby="triggerId">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item disabled" href="#">Disabled action</a>
-            </div>
+          <div class="col-md-12 mb-4">
+
+            <a type="button" class="btn-floating" id="facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="google_drive"><i class="fab fa-google-drive" aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="apple"><i class="fab fa-apple" aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="twitter" onclick="openLink()"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+
           </div>
-          <button class="btn btn-group btn-primary border m-3">
-            Notification <span class="badge badge-primary"></span>
+          <button class="btn btn-group btn-primary border m-3" id="login" onclick="Login()">
+            LogIn <span class="badge badge-primary"></span>
           </button>
+
         </div>
       </div>
     </div>
