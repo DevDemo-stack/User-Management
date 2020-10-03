@@ -1,8 +1,8 @@
 function openLink() {
-    if ('twitter') {
+    if (document.getElementById('twitter')) {
         window.open("https://twitter.com/?lang=en-in");
     }
-    if ('apple') {
+    if (document.getElementById('apple')) {
         window.open("https://www.apple.com/in/");
     }
     if ('facebook') {
