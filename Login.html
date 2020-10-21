@@ -20,7 +20,7 @@
   <title>Document</title>
 </head>
 
-<body style="background-color:indigo;">
+<body>
   <form action="post">
 
     <div class="container" style="text-align: center;">
@@ -39,12 +39,16 @@
           </div>
           <div class="col-md-12 mb-4">
 
-            <a type="button" class="btn-floating" id="facebook" onclick="openLink()"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            <a type="button" class="btn-floating" id="youtube" onclick="openLink()"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="facebook" onclick="openLink()"><i class="fab fa-facebook"
+                aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="youtube" onclick="openLink()"><i class="fab fa-youtube"
+                aria-hidden="true"></i></a>
             <a type="button" class="btn-floating" id="google_drive" onclick="openLink()"><i class="fab fa-google-drive"
                 aria-hidden="true"></i></a>
-            <a type="button" class="btn-floating" id="instagram" onclick="openLink()"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a type="button" class="btn-floating" id="apple" onclick="openLink()"><i class="fab fa-apple" aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="instagram" onclick="openLink()"><i class="fab fa-instagram"
+                aria-hidden="true"></i></a>
+            <a type="button" class="btn-floating" id="apple" onclick="openLink()"><i class="fab fa-apple"
+                aria-hidden="true"></i></a>
             <a type="button" class="btn-floating" id="twitter" onclick="openLink()"><i class="fab fa-twitter"
                 aria-hidden="true"></i></a>
 
@@ -62,3 +66,27 @@
 </body>
 
 </html>
+
+<!-- JS -->
+<script>
+  function openLink() {
+    if (document.getElementById('twitter')) {
+      window.open("https://twitter.com/?lang=en-in");
+    }
+    if (document.getElementById('apple')) {
+      window.open("https://www.apple.com/in/");
+    }
+    if ('facebook') {
+      window.open("https://www.facebook.com/");
+    }
+    if ('google_drive') {
+      window.open("https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&continue=https%3A%2F%2Fdrive.google.com%2F&followup=https%3A%2F%2Fdrive.google.com%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+    }
+    if ('youtube') {
+      window.open("https://www.youtube.com/?gl=IN");
+    }
+    if ('instagram') {
+      window.open("https://www.instagram.com/?hl=en");
+    }
+  }
+</script>

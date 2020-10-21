@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Index.js"></script>
+
+    <title>Registration</title>
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <form action="post">
+
+            <h1 style="margin: 4pc;">Registration</h1>
+            <!-- Border -->
+            <div class="border m-5"></div>
+            <!-- Form Border -->
+            <div class="row">
+                <div class="col-4 offset-4 border" style="border-radius: 1ch;">
+                    <!-- first name -->
+                    <div class="form-group" style="margin-right: 3px;">
+                        <label for="First-name"></label>
+                        <input type="text" class="form-control" name="firstname" id="" aria-describedby="emailHelpId"
+                            placeholder="First name">
+                    </div>
+                    <!-- last name -->
+                    <div class="form-group" style="margin-right: 3px;">
+                        <label for="Last-name"></label>
+                        <input type="text" class="form-control" name="lastname" id="" aria-describedby="emailHelpId"
+                            placeholder="Last name">
+                    </div>
+                    <!-- username -->
+                    <div class="form-group" style="margin-right: 3px;">
+                        <label for="Username"></label>
+                        <input type="text" class="form-control" name="username" id="" aria-describedby="emailHelpId"
+                            placeholder="Username">
+                    </div>
+                    <!-- password -->
+                    <div class="form-group">
+                        <label for="Password"></label>
+                        <input type="password" class="form-control" name="password" id="" placeholder="Password">
+                    </div>
+                    <!-- Gender [Radio] -->
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialUnchecked"
+                            name="materialExampleRadios">
+                        <label class="form-check-label" for="materialUnchecked">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialUnchecked"
+                            name="materialExampleRadios">
+                        <label class="form-check-label" for="materialUnchecked">Female</label>
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" class="form-control" name="email" id="" placeholder="Email address">
+                    </div>
+                    <!-- Mobile number -->
+                    <div class="form-group">
+                        <label for="mobile number"></label>
+                        <input type="number" class="form-control" name="mobilenumber" id="" placeholder="Mobile number">
+                    </div>
+                    <!-- social_media ICON -->
+                    <div class="col-md-12 mb-4">
+                        <a type="button" class="btn-floating" id="facebook" onclick="openLink()"><i
+                                class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a type="button" class="btn-floating" id="youtube" onclick="openLink()"><i
+                                class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a type="button" class="btn-floating" id="google_drive" onclick="openLink()"><i
+                                class="fab fa-google-drive" aria-hidden="true"></i></a>
+                        <a type="button" class="btn-floating" id="instagram" onclick="openLink()"><i
+                                class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a type="button" class="btn-floating" id="apple" onclick="openLink()"><i class="fab fa-apple"
+                                aria-hidden="true"></i></a>
+                        <a type="button" class="btn-floating" id="twitter" onclick="openLink()"><i
+                                class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Button -->
+                    <button class="btn btn-group btn-primary border m-3" id="login" style="color:aqua;">
+                        LogIn <span class="badge badge-primary"></span>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
+
+<!-- JS -->
+<script>
+    function openLink() {
+        if (document.getElementById('twitter')) {
+            window.open("https://twitter.com/?lang=en-in");
+        }
+        if (document.getElementById('apple')) {
+            window.open("https://www.apple.com/in/");
+        }
+        if ('facebook') {
+            window.open("https://www.facebook.com/");
+        }
+        if ('google_drive') {
+            window.open("https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&continue=https%3A%2F%2Fdrive.google.com%2F&followup=https%3A%2F%2Fdrive.google.com%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+        }
+        if ('youtube') {
+            window.open("https://www.youtube.com/?gl=IN");
+        }
+        if ('instagram') {
+            window.open("https://www.instagram.com/?hl=en");
+        }
+    }
+</script>
