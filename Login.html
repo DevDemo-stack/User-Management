@@ -21,7 +21,8 @@
 </head>
 
 <body>
-  <form action="post"> <!--Add[form = action="post"] once done with API-->
+
+  <form>
 
     <div class="container" style="text-align: center;">
       <h1 style="margin: 4pc;">Login</h1>
@@ -31,7 +32,7 @@
           <!-- Email -->
           <div class="form-group" style="margin-right: 3px;">
             <label for="Email"></label>
-            <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId"
+            <input type="email" class="form-control" name="email" id="username" aria-describedby="emailHelpId"
               placeholder="email address">
           </div>
           <!-- Password -->
@@ -94,5 +95,16 @@
         if (link=="instagram") {
             window.open("https://www.instagram.com/?hl=en");
         }
+    }
+
+    function redirect_after_login(){
+    	var value = document.getElementById('username').value;
+    	if(value){
+    		localStorage.setItem("email",value);
+    	}
+    	else {
+    	localStorage.setItem("email"," ");	
+    	}
+    	window.open("Dashboard.html");
     }
 </script>
