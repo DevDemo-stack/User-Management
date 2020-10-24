@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <form action="post">
+  <form>
 
     <div class="container" style="text-align: center;">
       <h1 style="margin: 4pc;">Login</h1>
@@ -30,7 +30,7 @@
         <div class="col-4 offset-4 border" style="border-radius: 1ch;">
           <div class="form-group" style="margin-right: 3px;">
             <label for="Email"></label>
-            <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId"
+            <input type="email" class="form-control" name="email" id="username" aria-describedby="emailHelpId"
               placeholder="email address">
           </div>
           <div class="form-group">
@@ -53,7 +53,8 @@
                 aria-hidden="true"></i></a>
 
           </div>
-          <button class="btn btn-group btn-primary border m-3" id="login" style="color:aqua;">
+          <button class="btn btn-group btn-primary border m-3" id="login" style="color:aqua;"
+			onclick="redirect_after_login()">
             LogIn <span class="badge badge-primary"></span>
           </button>
 
@@ -88,5 +89,16 @@
         if (link=="instagram") {
             window.open("https://www.instagram.com/?hl=en");
         }
+    }
+
+    function redirect_after_login(){
+    	var value = document.getElementById('username').value;
+    	if(value){
+    		localStorage.setItem("email",value);
+    	}
+    	else {
+    	localStorage.setItem("email"," ");	
+    	}
+    	window.open("Dashboard.html");
     }
 </script>
