@@ -56,11 +56,11 @@
                 aria-hidden="true"></i></a>
           </div>
           <!-- Login_Button -->
-          <button class="btn btn-group btn-primary border m-3" id="login" style="color:aqua;">
+          <button class="btn btn-group btn-primary border m-3" id="login" style="color:aqua;" onclick="redirect_after_login()">
              LogIn <span class="badge badge-primary"></span>
            </button>
           <!-- Registration_Button -->
-           <button class="btn btn-group btn-primary border m-3" id="login" style="color:aqua;">
+           <button class="btn btn-group btn-primary border m-3" id="register" style="color:aqua;">
              Register <span class="badge badge-primary"></span>
            </button>
 
@@ -97,14 +97,29 @@
         }
     }
 
-    function redirect_after_login(){
-    	var value = document.getElementById('username').value;
-    	if(value){
-    		localStorage.setItem("email",value);
-    	}
-    	else {
-    	localStorage.setItem("email"," ");	
-    	}
-    	window.open("Dashboard.html");
+    // check fields 
+    // NOTE: remaining [update requires] not working yet
+    var login = $('#login').val();
+    if (login != null) {
+      
+      function redirect_after_login(){
+        var value = document.getElementById('username').value;
+        if(value){
+          localStorage.setItem("email",value);
+        }
+        else {
+          localStorage.setItem("email"," ");	
+        }
+        window.open("Dashboard.html");
+      }
+    } else {
+      alert("Enter details!!");
     }
+
+    // Registration button event
+    $('#register').click(function(e){
+      e.preventDefault(); 
+      window.location = "Registration.html";
+    })
+
 </script>
