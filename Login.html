@@ -21,24 +21,26 @@
 </head>
 
 <body>
-  <form action="post">
+  <form action="post"> <!--Add[form = action="post"] once done with API-->
 
     <div class="container" style="text-align: center;">
       <h1 style="margin: 4pc;">Login</h1>
       <div class="border m-5"></div>
       <div class="row">
         <div class="col-4 offset-4 border" style="border-radius: 1ch;">
+          <!-- Email -->
           <div class="form-group" style="margin-right: 3px;">
             <label for="Email"></label>
             <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId"
               placeholder="email address">
           </div>
+          <!-- Password -->
           <div class="form-group">
             <label for="Password"></label>
             <input type="password" class="form-control" name="password" id="" placeholder="password">
           </div>
+          <!-- social_media ICON -->
           <div class="col-md-12 mb-4">
-
             <a type="button" class="btn-floating" onclick="openLink('facebook')"><i class="fab fa-facebook"
                 aria-hidden="true"></i></a>
             <a type="button" class="btn-floating" onclick="openLink('youtube')"><i class="fab fa-youtube"
@@ -51,8 +53,8 @@
                 aria-hidden="true"></i></a>
             <a type="button" class="btn-floating" onclick="openLink('twitter')"><i class="fab fa-twitter"
                 aria-hidden="true"></i></a>
-
           </div>
+          <!-- Button -->
           <button class="btn btn-group btn-primary border m-3" id="login" style="color:aqua;">
             LogIn <span class="badge badge-primary"></span>
           </button>
