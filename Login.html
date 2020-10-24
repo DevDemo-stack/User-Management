@@ -39,17 +39,17 @@
           </div>
           <div class="col-md-12 mb-4">
 
-            <a type="button" class="btn-floating" id="facebook" onclick="openLink()"><i class="fab fa-facebook"
+            <a type="button" class="btn-floating" onclick="openLink('facebook')"><i class="fab fa-facebook"
                 aria-hidden="true"></i></a>
-            <a type="button" class="btn-floating" id="youtube" onclick="openLink()"><i class="fab fa-youtube"
+            <a type="button" class="btn-floating" onclick="openLink('youtube')"><i class="fab fa-youtube"
                 aria-hidden="true"></i></a>
-            <a type="button" class="btn-floating" id="google_drive" onclick="openLink()"><i class="fab fa-google-drive"
+            <a type="button" class="btn-floating" onclick="openLink('google_drive')"><i class="fab fa-google-drive"
                 aria-hidden="true"></i></a>
-            <a type="button" class="btn-floating" id="instagram" onclick="openLink()"><i class="fab fa-instagram"
+            <a type="button" class="btn-floating" onclick="openLink('instagram')"><i class="fab fa-instagram"
                 aria-hidden="true"></i></a>
-            <a type="button" class="btn-floating" id="apple" onclick="openLink()"><i class="fab fa-apple"
+            <a type="button" class="btn-floating" onclick="openLink('apple')"><i class="fab fa-apple"
                 aria-hidden="true"></i></a>
-            <a type="button" class="btn-floating" id="twitter" onclick="openLink()"><i class="fab fa-twitter"
+            <a type="button" class="btn-floating" onclick="openLink('twitter')"><i class="fab fa-twitter"
                 aria-hidden="true"></i></a>
 
           </div>
@@ -69,24 +69,24 @@
 
 <!-- JS -->
 <script>
-  function openLink() {
-    if (document.getElementById('twitter')) {
-      window.open("https://twitter.com/?lang=en-in");
+    function openLink(link) {
+        if (link=="twitter") {
+            window.open("https://twitter.com/?lang=en-in");
+        }
+        if (link=="apple") {
+            window.open("https://www.apple.com/in/");
+        }
+        if (link=="facebook") {
+            window.open("https://www.facebook.com/");
+        }
+        if (link=="google_drive") {
+            window.open("https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&continue=https%3A%2F%2Fdrive.google.com%2F&followup=https%3A%2F%2Fdrive.google.com%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+        }
+        if (link=="youtube") {
+            window.open("https://www.youtube.com/?gl=IN");
+        }
+        if (link=="instagram") {
+            window.open("https://www.instagram.com/?hl=en");
+        }
     }
-    if (document.getElementById('apple')) {
-      window.open("https://www.apple.com/in/");
-    }
-    if ('facebook') {
-      window.open("https://www.facebook.com/");
-    }
-    if ('google_drive') {
-      window.open("https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&continue=https%3A%2F%2Fdrive.google.com%2F&followup=https%3A%2F%2Fdrive.google.com%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
-    }
-    if ('youtube') {
-      window.open("https://www.youtube.com/?gl=IN");
-    }
-    if ('instagram') {
-      window.open("https://www.instagram.com/?hl=en");
-    }
-  }
 </script>
