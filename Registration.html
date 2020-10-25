@@ -16,6 +16,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="Index.js"></script>
+    <script src="Common.js"></script>
+
 
     <title>Registration</title>
 </head>
@@ -72,22 +74,23 @@
                     <!-- Mobile number -->
                     <div class="form-group">
                         <label for="mobile number"></label>
-                        <input type="text" class="form-control" name="mobilenumber" id="mobile_id" placeholder="Mobile number" maxlength="10" onkeypress="return isNumber(event)">
+                        <input type="text" class="form-control" name="mobilenumber" id="mobile_id"
+                            placeholder="Mobile number" maxlength="10" onkeypress="return isNumber(event)">
                     </div>
                     <!-- social_media ICON -->
                     <div class="col-md-12 mb-4">
-                        <a type="button" class="btn-floating" onclick="openLink('facebook')"><i
-                                class="fab fa-facebook" aria-hidden="true"></i></a>
-                        <a type="button" class="btn-floating" onclick="openLink('youtube')"><i
-                                class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a type="button" class="btn-floating" onclick="openLink('facebook')"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a>
+                        <a type="button" class="btn-floating" onclick="openLink('youtube')"><i class="fab fa-youtube"
+                                aria-hidden="true"></i></a>
                         <a type="button" class="btn-floating" onclick="openLink('google_drive')"><i
                                 class="fab fa-google-drive" aria-hidden="true"></i></a>
                         <a type="button" class="btn-floating" onclick="openLink('instagram')"><i
                                 class="fab fa-instagram" aria-hidden="true"></i></a>
                         <a type="button" class="btn-floating" onclick="openLink('apple')"><i class="fab fa-apple"
                                 aria-hidden="true"></i></a>
-                        <a type="button" class="btn-floating" onclick="openLink('twitter')"><i
-                                class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a type="button" class="btn-floating" onclick="openLink('twitter')"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
                     </div>
                     <!-- Button -->
                     <button class="btn btn-group btn-primary border m-3" id="login" style="color:aqua;">
@@ -104,35 +107,14 @@
 
 <!-- JS -->
 <script type="text/javascript">
-    function openLink(link) {
-        if (link=="twitter") {
-            window.open("https://twitter.com/?lang=en-in");
-        }
-        if (link=="apple") {
-            window.open("https://www.apple.com/in/");
-        }
-        if (link=="facebook") {
-            window.open("https://www.facebook.com/");
-        }
-        if (link=="google_drive") {
-            window.open("https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&continue=https%3A%2F%2Fdrive.google.com%2F&followup=https%3A%2F%2Fdrive.google.com%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
-        }
-        if (link=="youtube") {
-            window.open("https://www.youtube.com/?gl=IN");
-        }
-        if (link=="instagram") {
-            window.open("https://www.instagram.com/?hl=en");
-        }
-    }
 
     // Mobile No. on digits only 
     function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
     }
-    return true;
-} 
-
 </script>
