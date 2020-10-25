@@ -34,8 +34,9 @@
                     <!-- first name -->
                     <div class="form-group" style="margin-right: 3px;">
                         <label for="First-name"></label>
-                        <input type="text" class="form-control" name="firstname" id="" aria-describedby="emailHelpId"
-                            placeholder="First name">
+                        <input type="text" class="form-control" name="firstname" id="f_name"
+                            aria-describedby="emailHelpId" placeholder="First name" required />
+                        <span id="firstname"></span>
                     </div>
                     <!-- last name -->
                     <div class="form-group" style="margin-right: 3px;">
@@ -52,7 +53,15 @@
                     <!-- password -->
                     <div class="form-group">
                         <label for="Password"></label>
-                        <input type="password" class="form-control" name="password" id="" placeholder="Password">
+                        <input type="password" class="form-control" name="password" id="password"
+                            placeholder="Password">
+                    </div>
+                    <!-- Confirm password -->
+                    <div class="form-group">
+                        <label for="Confirm Password"></label>
+                        <input type="password" class="form-control" name="confirm_password" id="confirm_password"
+                            placeholder="Confirm Password">
+                        <span id="message"></span>
                     </div>
                     <!-- Gender [Radio] -->
                     <div class="form-check form-check-inline">
@@ -106,6 +115,23 @@
 
 <!-- JS -->
 <script type="text/javascript">
+    $('#f_name').focusout(function () {
+        var firstname = $('#f_name').val();
+        var regex = /[A-Z][a-z]{1,30}/
+        if (!firstname) {
+            $('#firstname').html('Firstname can not be empty!!!').css('color', 'green');
+        }
+        if (!regex.test(firstnanme)) {
+            $('#firstname').html('Firstname is invalid!!!').css('color', 'green');
+        }
+    })
+    // Confirm password validation
+    $('#password, #confirm_password').on('keyup', function () {
+        if ($('#password').val() == $('#confirm_password').val()) {
+            $('#message').html('Matching').css('color', 'green');
+        } else
+            $('#message').html('Not Matching').css('color', 'red');
+    });
 
     // Mobile No. on digits only 
     function isNumber(evt) {
